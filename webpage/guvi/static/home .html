@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AccentAI - Learn Dialects and Accents</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./img/download.png" type="image/x-icon" />
+
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">AccentAI</h1>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/static/home.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/static/products.html" class="nav-link">Video Tutorial</a></li>
+        <li class="nav-item"><a href="/static/aboutus.html" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="/static/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-overlay">
+        <h2 class="hero-title">Master Dialects and Accents</h2>
+        <p class="hero-description">Learn to communicate effectively across regions</p>
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+      <img src="./img/image.jpg" class="hero-image">
+    </div>
+  </section>
+  
+  <div class="container">
+
+    <section id="accentSelection" >
+      <h2>Select Your Accent:</h2>
+      <select id="accentSelector">
+        <option value="american">American English</option>
+        <option value="british">British English</option>
+        <!-- Add more options for different accents -->
+      </select>
+      <button onclick="startLearning()">Start Learning</button>
+    </section>
+    <h1>AI Model Integration</h1>
+    <textarea id="inputText" rows="4" cols="50"></textarea>
+    <button onclick="callAI()">Generate Text</button>
+    <div id="outputText"></div>
+    <h1>Dialect Translation</h1>
+    <textarea id="inputText" rows="4" cols="50"></textarea>
+    <button onclick="translateText()">Translate</button>
+    <div id="outputText"></div>
+    
+    
+    <section id="learningArea" style="display: none;">
+      <h2>Practice Area</h2>
+      <div id="textToSpeak"></div>
+      <textarea id="userInput" placeholder="Type what you hear"></textarea>
+      <button onclick="checkAnswer()">Check Answer</button>
+      <p id="feedback"></p>
+    </section>
+
+
+    <section id="videoTutorial">
+      <h2>Video Tutorial</h2>
+      <p>Check out our video tutorial to learn more:</p>
+      <a href="products.html" class="colorful-link">Video Tutorial</a>
+    </section>
+
+    <!-- Gamification Section -->
+    <section id="gamification">
+      <h2>Learning Process....</h2>
+      <div id="progressBar"></div>
+      <div id="badges">
+        <h3>Badges</h3>
+        <ul>
+          <li>Accent Master</li>
+          <li>Dialect Explorer</li>
+          <!-- Add more badges -->
+        </ul>
+      </div>
+      <div id="leaderboard">
+        <h3>Leaderboard</h3>
+        <ol>
+          <li>Nithish - 500 points</li>
+          <li>Venkatesh - 400 points</li>
+          <!-- Display top performers -->
+        </ol>
+      </div>
+    </section>
+  </div>
+  
+  <footer class="footer">
+    <p class="footer-text">Copyright © 2024 AccentAI. All rights reserved.</p>
+  </footer>
+  <div><h2 class="mar"><marquee>Thank For Visiting Our Page</marquee</h2></div>  
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function translateText() {
+            const inputText = $('#inputText').val();
+            const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+            const apiUrl = 'https://translation.googleapis.com/language/translate/v2';
+  
+            $.ajax({
+                url: apiUrl,
+                type: 'POST',
+                data: {
+                    key: apiKey,
+                    q: inputText,
+                    source: 'en', // Source language code (e.g., English)
+                    target: 'es'  // Target language code (e.g., Spanish)
+                },
+                success: function(response) {
+                    if (response.data && response.data.translations && response.data.translations.length > 0) {
+                        $('#outputText').text(response.data.translations[0].translatedText);
+                    } else {
+                        $('#outputText').text('Translation not available.');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error:', error);
+                    $('#outputText').text('Error translating text. Please try again later.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

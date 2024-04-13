@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    background-image: url('./img/background.png'); /* Replace with the path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    background-color: #fff; /* White container background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  }
+  
+  #aboutUs {
+    padding: 50px 0; /* Adjust the padding as needed */
+  }
+  .mar{
+    color: #ffffff;
+  }
+  
+  #aboutUs p {
+    margin-bottom: 20px; /* Adjust the margin between paragraphs */
+  }
+  
+  #accentSelection {
+    text-align: center;
+  }
+  
+.logo {
+    font-size: px;
+    font-weight: bold;
+  }
+  
+  .nav {
+    margin-top: 10px;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  header {
+    background-color: #333; /* Green header background */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px 10px 0 0; /* Rounded corners, except bottom */
+  }
+
+  section {
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Add padding */
+  }
+  
+  button {
+    background-color: #008CBA; /* Blue button background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth hover effect */
+  }
+  
+  button:hover {
+    background-color: #005f6b; /* Darker blue on hover */
+  }
+  
+  /* Styling for gamification elements */
+  #progressBar {
+    height: 20px;
+    background-color: #ff6f61; /* Red progress bar */
+    width: 0%;
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  #badges {
+    margin-top: 20px
+
+  }
+  
+  #badges ul {
+    list-style-type: none;
+    padding: 0;
+    width: 250px;
+  }
+  
+  #badges li {
+    background-color: #ffd166; /* Yellow badge background */
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  #leaderboard ol {
+    padding-left: 20px;
+  }
+  
+/* CSS for the hyperlink */
+a {
+    color: #008CBA; /* Blue color for normal state */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  a:hover {
+    color: #005f6b; /* Darker blue color on hover */
+  }
+  
+  .footer {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #333; /* Dark footer background */
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 20px; /* Add some margin from the content */
+    color: #ffffff;
+    border-radius: 0 0 10px 10px; /* Rounded corners, except top */
+  }
+  /* CSS for the hyperlink */
+a.colorful-link {
+    color: #008CBA; /* Blue color for normal state */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  a.colorful-link:hover {
+    color: #005f6b; /* Darker blue color on hover */
+  }
+  
+  /* CSS for footer */
+/* CSS for the hyperlink */
+a.colorful-link {
+    color: #008CBA; /* Blue color for normal state */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  a.colorful-link:hover {
+    color: #005f6b; /* Darker blue color on hover */
+  }
+  
+  /* CSS for footer */
+  .footer {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #333; /* Dark footer background */
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 20px; /* Add some margin from the content */
+    color: #ffffff;
+    border-radius: 0 0 10px 10px; /* Rounded corners, except top */
+  }
+
+  .hero {
+    position: relative;
+    background-image: url('static/img/image.jpg');
+    background-size: cover;
+    color: #ffffff; /* Change text color to contrast with image */
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1; /* Ensure content stays above the image */
+  }
+  .hero-image {
+    position: center;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 500px;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  
+  .btn {
+    display: inline-block;
+    background-color: #008CBA;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #005f6b;
+  }
+  
+  /* Video Tutorial Section Styles */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
